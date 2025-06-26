@@ -29,7 +29,7 @@
           <a href="#servicios">Servicios</a>
           <a href="#beneficios">Beneficios</a>
           <a href="#nosotros">Nosotros</a>
-          <a href="#contacto">Contacto</a>
+          <a href="#contacto">Hablá con un asesor ahora</a>
         </nav>
       </div>
     </header>
@@ -37,16 +37,16 @@
     <main>
       <section id="inicio" class="hero parallax">
         <div class="container hero-content">
-          <h1 class="fade-up">El escudo digital de tu negocio</h1>
+          <h1 class="fade-up">Tu negocio seguro, siempre</h1>
           <p class="fade-up" style="animation-delay: 0.1s">
-            Tecnología de vanguardia con la fuerza de un arcángel protector.
+            Tecnología de alto nivel con la fuerza de un guardián digital.
           </p>
           <a
             href="#"
             id="open-modal"
             class="btn-primary fade-up"
             style="animation-delay: 0.2s"
-            >Activar Protección</a
+            >Solicitá tu diagnóstico gratuito</a
           >
         </div>
       </section>
@@ -58,12 +58,12 @@
             <div class="service-card hover-glow fade-up slide-in-left">
               <img
                 src="https://images.unsplash.com/photo-1605902711622-cfb43c44357b?auto=format&fit=crop&w=400&q=80"
-                alt="Pentesting"
+                alt="Test de Vulnerabilidades"
                 class="service-img"
               />
               <i class="fas fa-shield-alt"></i>
-              <h3>Pentesting</h3>
-              <p>Descubrimos brechas antes que los atacantes.</p>
+              <h3>Test de Vulnerabilidades</h3>
+              <p>Buscamos fallas antes que los atacantes para mantener tu empresa segura.</p>
             </div>
             <div
               class="service-card hover-glow fade-up slide-in-right"
@@ -76,7 +76,7 @@
               />
               <i class="fas fa-eye"></i>
               <h3>Monitoreo 24/7</h3>
-              <p>Reacción inmediata ante amenazas.</p>
+              <p>Vigilamos tus sistemas día y noche y actuamos de inmediato.</p>
             </div>
             <div
               class="service-card hover-glow fade-up slide-in-left"
@@ -89,7 +89,7 @@
               />
               <i class="fas fa-bolt"></i>
               <h3>Respuesta a Incidentes</h3>
-              <p>Mitigamos impactos y recuperamos tu operación.</p>
+              <p>Si ocurre un ataque, te ayudamos a retomar operaciones sin perder tiempo.</p>
             </div>
             <div
               class="service-card hover-glow fade-up slide-in-right"
@@ -101,8 +101,8 @@
                 class="service-img"
               />
               <i class="fas fa-user-shield"></i>
-              <h3>Concientización</h3>
-              <p>Capacitamos a tu equipo como primera defensa.</p>
+              <h3>Capacitación en Seguridad</h3>
+              <p>Entrenamos a tu equipo para evitar errores y fraudes.</p>
             </div>
           </div>
         </div>
@@ -119,7 +119,7 @@
                 alt="Planes Accesibles"
                 class="benefit-img"
               />
-              <p>Planes flexibles y accesibles.</p>
+              <p>Planes flexibles que se adaptan a tu presupuesto.</p>
             </div>
             <div class="benefit-item fade-up" style="animation-delay: 0.1s">
               <i class="fas fa-handshake"></i>
@@ -128,7 +128,7 @@
                 alt="Soporte Local"
                 class="benefit-img"
               />
-              <p>Acompañamiento cercano y soporte local.</p>
+              <p>Soporte local y acompañamiento en tu idioma.</p>
             </div>
             <div class="benefit-item fade-up" style="animation-delay: 0.2s">
               <i class="fas fa-bolt"></i>
@@ -137,12 +137,53 @@
                 alt="Implementaci&oacute;n &aacute;gil"
                 class="benefit-img"
               />
-              <p>Implementación ágil y sin complicaciones.</p>
+              <p>Puesta en marcha rápida sin detener tu operación.</p>
             </div>
           </div>
         </div>
       </section>
 
+<section id="comparativa" class="section">
+  <div class="container">
+    <h2 class="section-title">PYME protegida vs. sin protección</h2>
+    <div class="comparison">
+      <div class="column protegido fade-up">
+        <h3><i class="fas fa-shield-alt"></i> Con Arkangel</h3>
+        <ul>
+          <li><i class="fas fa-clock"></i> Respuesta inmediata ante incidentes</li>
+          <li><i class="fas fa-database"></i> Mínimo riesgo de pérdida de datos</li>
+          <li><i class="fas fa-money-bill-wave"></i> Costos de recuperación bajos</li>
+          <li><i class="fas fa-user-lock"></i> Menor exposición a ataques</li>
+        </ul>
+      </div>
+      <div class="column sin-proteccion fade-up">
+        <h3><i class="fas fa-exclamation-triangle"></i> Sin protección</h3>
+        <ul>
+          <li>Respuestas lentas y descoordinadas</li>
+          <li>Alto riesgo de perder información</li>
+          <li>Gastos elevados para recuperarse</li>
+          <li>Mayor visibilidad para los atacantes</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="simulador" class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">Simulá tus riesgos</h2>
+    <div class="simulator fade-up">
+      <label for="rubro">Seleccioná tu rubro:</label>
+      <select id="rubro">
+        <option value="">Elegí una opción</option>
+        <option value="ecommerce">E-commerce</option>
+        <option value="salud">Salud</option>
+        <option value="servicios">Servicios</option>
+      </select>
+      <div id="rubro-info" class="rubro-info"></div>
+    </div>
+  </div>
+</section>
       <section id="nosotros" class="section">
         <div class="container about">
           <h2 class="section-title">Sobre Nosotros</h2>
@@ -158,6 +199,33 @@
           </p>
         </div>
       </section>
+<section id="historia" class="section">
+  <div class="container">
+    <h2 class="section-title">Nuestra Historia</h2>
+    <div class="timeline">
+      <div class="timeline-item fade-up">
+        <i class="fas fa-shield-alt"></i>
+        <h3>Origen Protector</h3>
+        <p>Inspirados en San Miguel, nacimos para defender a las pymes argentinas.</p>
+      </div>
+      <div class="timeline-item fade-up">
+        <i class="fas fa-bolt"></i>
+        <h3>Crecimiento</h3>
+        <p>Sumamos expertos y tecnología de última generación.</p>
+      </div>
+      <div class="timeline-item fade-up">
+        <i class="fas fa-lightbulb"></i>
+        <h3>Innovación</h3>
+        <p>Desarrollamos soluciones ágiles y cercanas.</p>
+      </div>
+      <div class="timeline-item fade-up">
+        <i class="fas fa-people-group"></i>
+        <h3>Tu futuro seguro</h3>
+        <p>Hoy protegemos tu negocio para que puedas crecer sin miedo.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
       <section id="testimonios" class="section">
         <div class="container">
@@ -184,7 +252,7 @@
               required
             ></textarea>
             <button type="submit" class="btn-primary">
-              Activar Protección
+              Solicitá tu diagnóstico gratuito
             </button>
           </form>
           <p class="whatsapp fade-up" style="animation-delay: 0.1s">
