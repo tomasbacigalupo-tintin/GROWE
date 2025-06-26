@@ -3,186 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Página web empresarial premium con un diseño moderno y minimalista para empresas que buscan proyectar profesionalismo y calidad">
-    <meta name="keywords" content="empresa, consultoría, transformación digital, gestión financiera, servicios empresariales">
-    <title>Scale Bridge Solution | Soluciones Empresariales</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yourusername/yourrepository/styles.min.css">
+    <meta name="description" content="Soluciones de ciberseguridad para pymes argentinas. Pentesting, monitoreo y respuesta a incidentes con enfoque en innovación y cercanía." />
+    <title>SegurPyme | Ciberseguridad para Pymes</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <script defer src="scripts.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header section with main navigation -->
-    <header class="header bg-primary py-3">
-        <nav class="container d-flex justify-content-between align-items-center" aria-label="Main Navigation">
-            <!-- Logo or brand name link -->
-            <a href="index.html" class="text-white fs-4 fw-bold"><img src="img/logo.jpeg" alt="Logo de ScaleBridgeSolution" style="width: 40px; height: 40px;"> ScaleBridgeSolution</a>
-            <ul class="nav">
-                <!-- Navigation links -->
-                <li class="nav-item"><a class="nav-link text-white" href="index.html">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="sobre-nosotros.html">Sobre Nosotros</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="servicios.html">Servicios</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="blog.html">Blog</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#inicio" class="logo">SegurPyme</a>
+            <nav class="nav">
+                <a href="#inicio">Inicio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#beneficios">Beneficios</a>
+                <a href="#testimonios">Testimonios</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <!-- Hero Section (Inicio) -->
-        <section id="inicio" class="hero d-flex align-items-center justify-content-center text-center text-white" style="height: 80vh; background-image: url('https://t3.ftcdn.net/jpg/07/53/20/82/360_F_753208233_2tFjybdyLCTU12MEJfguSJKBtl0sG5pj.jpg'); background-size: cover; background-position: center; position: relative;">
-            <div class="container position-relative">
-                <!-- Main title for the hero section -->
-                <h1 id="hero-title" class="display-4 fw-bold">Bienvenido a SBS</h1>
-                <!-- Subtitle or lead text for the hero section -->
-                <p class="lead">Soluciones que impulsan tu negocio hacia el futuro.</p>
-                <!-- Call to action button -->
-                <a href="#servicios" class="btn btn-secondary mt-4" onclick="window.scroll({top: document.querySelector('#servicios').offsetTop, behavior: 'smooth'}); return false;">Descubre nuestros servicios</a>
+        <section id="inicio" class="hero">
+            <div class="container hero-content">
+                <h1 class="fade-up">Protegemos tu pyme</h1>
+                <p class="fade-up" style="animation-delay:0.1s">Ciberseguridad profesional con trato cercano y soluciones a tu medida.</p>
+                <a href="#contacto" class="btn-primary fade-up" style="animation-delay:0.2s">Solicitar demo</a>
             </div>
         </section>
 
-        <!-- Servicios Section -->
-        <section id="servicios" class="py-5 bg-light" aria-labelledby="services-title">
+        <section id="servicios" class="section">
             <div class="container">
-                <!-- Section title -->
-                <h2 id="services-title" class="text-primary mb-4">Nuestros Servicios</h2>
-                <div class="row">
-                    <!-- Service 1: Consultoría Empresarial -->
-                    <article class="col-md-4 mb-4">
-                        <div class="service bg-white border rounded p-4 h-100">
-                            <h3 class="text-secondary">Consultoría Empresarial</h3>
-                            <p>Proveemos asesoría estratégica para que tu empresa alcance sus objetivos con éxito.</p>
-                        </div>
-                    </article>
-                    <!-- Service 2: Transformación Digital -->
-                    <article class="col-md-4 mb-4">
-                        <div class="service bg-white border rounded p-4 h-100">
-                            <h3 class="text-secondary">Transformación Digital</h3>
-                            <p>Digitaliza tus procesos y escala tu negocio con nuestras soluciones tecnológicas.</p>
-                        </div>
-                    </article>
-                    <!-- Service 3: Gestión Financiera -->
-                    <article class="col-md-4 mb-4">
-                        <div class="service bg-white border rounded p-4 h-100">
-                            <h3 class="text-secondary">Gestión Financiera</h3>
-                            <p>Optimizamos la administración de recursos para maximizar la rentabilidad de tu negocio.</p>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Equipo Section -->
-        <section id="equipo" class="py-5" aria-labelledby="team-title">
-            <div class="container">
-                <!-- Section title -->
-                <h2 id="team-title" class="text-primary mb-5 text-center">Nuestro Equipo</h2>
-                <div class="row">
-                    <!-- Team member 1: Gabo -->
-                    <div class="col-md-6 mb-4">
-                        <div class="card team-member h-100 shadow-sm border-0">
-                            <div class="card-body text-center">
-                                <img src="img/gabo.jpeg" alt="Foto de Gabriel Herrera, CEO y Co Fundador" class="rounded-circle mb-3" style="width: 150px; height: 150px;" loading="lazy">
-                                <h3 class="card-title text-primary">Gabriel Herrera</h3>
-                                <p class="card-text">CEO & Co - Fundador</p>
-                                <p class="text-muted">Con sus años de experiencia en el ámbito de la consultoría empresarial, Gabriel lidera el equipo de SBS con visión y compromiso.</p>
-                                <div class="social-links mt-3">
-                                    <a href="#" class="text-primary me-2"><i class="fab fa-linkedin"></i></a>
-                                    <a href="#" class="text-primary me-2"><i class="fab fa-twitter"></i></a>
-                                </div>
-                            </div>
-                        </div>
+                <h2 class="section-title">Servicios</h2>
+                <div class="grid-services">
+                    <div class="service-card">
+                        <i class="fas fa-search"></i>
+                        <h3>Pentesting</h3>
+                        <p>Identificamos vulnerabilidades en tu infraestructura antes de que lo hagan los atacantes.</p>
                     </div>
-                    <!-- Team member 2: Tomas Bacigalupo -->
-                    <div class="col-md-6 mb-4">
-                        <div class="card team-member h-100 shadow-sm border-0">
-                            <div class="card-body text-center">
-                                <img src="img/IMG-20240608-WA0073.jpg" alt="Foto de Tomas Bacigalupo, CTO" class="rounded-circle mb-3" style="width: 150px; height: 150px;" loading="lazy">
-                                <h3 class="card-title text-primary">Tomas Bacigalupo</h3>
-                                <p class="card-text">CTO & Co - Fundador</p>
-                                <p class="text-muted">Tomas es un apasionado de la tecnología y la innovación, impulsando la transformación digital en nuestros clientes.</p>
-                                <div class="social-links mt-3">
-                                    <a href="#" class="text-primary me-2"><i class="fab fa-linkedin"></i></a>
-                                    <a href="#" class="text-primary me-2"><i class="fab fa-github"></i></a>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="service-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Monitoreo 24/7</h3>
+                        <p>Vigilancia continua de tus sistemas para reaccionar ante cualquier amenaza en tiempo real.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-headset"></i>
+                        <h3>Respuesta a Incidentes</h3>
+                        <p>Equipo especializado para minimizar el impacto y recuperar la operatividad de tu empresa.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-user-lock"></i>
+                        <h3>Concientización</h3>
+                        <p>Capacitaciones que convierten a tu equipo en la primera línea de defensa.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contacto Section -->
-        <section id="contacto" class="py-5" aria-labelledby="contact-title">
+        <section id="beneficios" class="section section-alt">
             <div class="container">
-                <!-- Section title -->
-                <h2 id="contact-title" class="text-primary mb-4">Contacto</h2>
-                <!-- Contact form -->
-                <form action="/send-contact" method="post" aria-label="Formulario de contacto" class="needs-validation" novalidate>
-                    <div class="mb-3">
-                        <!-- Name field -->
-                        <label for="nombre" class="form-label">Nombre:</label>
-                        <input type="text" id="nombre" name="nombre" class="form-control" required>
-                        <div class="invalid-feedback">Por favor ingrese su nombre.</div>
-                    </div>
-                    <div class="mb-3">
-                        <!-- Email field -->
-                        <label for="email" class="form-label">Correo Electrónico:</label>
-                        <input type="email" id="email" name="email" class="form-control" required>
-                        <div class="invalid-feedback">Por favor ingrese un correo electrónico válido.</div>
-                    </div>
-                    <div class="mb-3">
-                        <!-- Message field -->
-                        <label for="mensaje" class="form-label">Mensaje:</label>
-                        <textarea id="mensaje" name="mensaje" class="form-control" rows="5" required></textarea>
-                        <div class="invalid-feedback">Por favor ingrese un mensaje.</div>
-                    </div>
-                    <!-- Submit button -->
-                    <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
-                </form>
+                <h2 class="section-title">Beneficios para Pymes</h2>
+                <div class="benefits-list">
+                    <div class="benefit-item">Soluciones escalables y a precios accesibles.</div>
+                    <div class="benefit-item">Soporte local y asesoramiento personalizado.</div>
+                    <div class="benefit-item">Implementación rápida sin complicaciones técnicas.</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonios" class="section">
+            <div class="container">
+                <h2 class="section-title">Casos de Éxito</h2>
+                <div class="testimonials">
+                    <blockquote class="testimonial">
+                        <p>"Gracias a SegurPyme pudimos detectar a tiempo una brecha que hubiera paralizado la empresa"</p>
+                        <cite>- Ana, CEO de Tecnología ABC</cite>
+                    </blockquote>
+                    <blockquote class="testimonial">
+                        <p>"El monitoreo constante nos da la tranquilidad que necesitábamos para enfocarnos en el negocio"</p>
+                        <cite>- Martín, Director de Pyme Servicios</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">¿Listo para proteger tu empresa?</h2>
+                <p>Contactanos hoy mismo y coordiná una demo sin cargo.</p>
+                <a href="mailto:info@segurpyme.com" class="btn-primary">Escribir a Ventas</a>
             </div>
         </section>
     </main>
 
-    <!-- Footer Section -->
-    <footer class="bg-primary text-white text-center py-4">
-        <div class="footer-social mb-3" aria-label="Enlaces a redes sociales">
-            <!-- Social media links -->
-            <a href="#" aria-label="Facebook" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" aria-label="Twitter" class="text-white me-3"><i class="fab fa-twitter"></i></a>
-            <a href="#" aria-label="LinkedIn" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 SegurPyme - Ciberseguridad para pymes. Todos los derechos reservados.</p>
         </div>
-        <!-- Copyright notice -->
-        <p>&copy; 2024 ScaleBridgeSolution. Todos los derechos reservados.</p>
-        <!-- Newsletter subscription form -->
-        <form action="#" method="post" aria-label="Formulario de suscripción al boletín" class="d-flex justify-content-center">
-            <label for="boletin-email" class="sr-only">Correo Electrónico</label>
-            <input type="email" id="boletin-email" name="boletin-email" class="form-control w-50 me-2" placeholder="Suscríbete a nuestro boletín" required>
-            <button type="submit" class="btn btn-secondary">Suscribirse</button>
-        </form>
     </footer>
 
-    <!-- JavaScript to handle form validation -->
-    <script>
-        (function () {
-            'use strict'
-            var forms = document.querySelectorAll('.needs-validation')
-            Array.prototype.slice.call(forms)
-                .forEach(function (form) {
-                    form.addEventListener('submit', function (event) {
-                        if (!form.checkValidity()) {
-                            event.preventDefault()
-                            event.stopPropagation()
-                        }
-                        form.classList.add('was-validated')
-                    }, false)
-                })
-        })()
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
