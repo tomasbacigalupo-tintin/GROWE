@@ -1,6 +1,8 @@
 // Animaciones y parallax
 document.addEventListener("DOMContentLoaded", () => {
-  const faders = document.querySelectorAll(".fade-up");
+  const faders = document.querySelectorAll(
+    ".fade-up, .slide-in-left, .slide-in-right",
+  );
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
