@@ -1,22 +1,48 @@
 // Animaciones y parallax
-document.addEventListener('DOMContentLoaded', () => {
-  const faders = document.querySelectorAll('.fade-up');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animate');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
+document.addEventListener("DOMContentLoaded", () => {
+  const faders = document.querySelectorAll(".fade-up");
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1 },
+  );
 
-  faders.forEach(el => observer.observe(el));
+  faders.forEach((el) => observer.observe(el));
 
-  const parallaxElems = document.querySelectorAll('.parallax');
-  window.addEventListener('scroll', () => {
+  const parallaxElems = document.querySelectorAll(".parallax");
+  window.addEventListener("scroll", () => {
     const scroll = window.pageYOffset;
-    parallaxElems.forEach(el => {
+    parallaxElems.forEach((el) => {
       el.style.backgroundPositionY = `${scroll * -0.3}px`;
     });
+  });
+
+  const modal = document.getElementById("contact-modal");
+  const openModalBtn = document.getElementById("open-modal");
+  const closeModalBtn = document.querySelector(".modal-close");
+  const modalForm = document.getElementById("modal-form");
+
+  openModalBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    modal.classList.add("show");
+    modal.setAttribute("aria-hidden", "false");
+  });
+
+  closeModalBtn.addEventListener("click", () => {
+    modal.classList.remove("show");
+    modal.setAttribute("aria-hidden", "true");
+  });
+
+  modalForm.addEventListener("submit", (e) => {
+    if (!modalForm.checkValidity()) {
+      e.preventDefault();
+      modalForm.reportValidity();
+    }
   });
 });
