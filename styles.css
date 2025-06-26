@@ -1,8 +1,8 @@
 :root {
   --bg-main: #0a0f1a;
   --bg-alt: #131a24;
-  --accent: #0b4f6c; /* deep blue */
-  --accent-light: #1f8ea3; /* softer highlight */
+  --accent: #0f75bd; /* improved contrast */
+  --accent-light: #21a0f6; /* softer highlight */
   --bg-gradient: radial-gradient(circle at 20% 20%, #101521, var(--bg-main) 80%);
   --gold: #f0c674;
   --text: #f5f5f5;
@@ -136,6 +136,7 @@ body {
 
 .section {
   padding: 5rem 0;
+  margin-bottom: 4rem;
 }
 
 .section-alt {
@@ -265,6 +266,9 @@ body {
 .whatsapp a {
   color: var(--accent-light);
   text-decoration: none;
+}
+.whatsapp {
+  margin-top: 1rem;
 }
 
 .testimonial {
@@ -398,6 +402,9 @@ body {
 @media (max-width: 600px) {
   .hero-content h1 {
     font-size: 2rem;
+  }
+  .hero {
+    background-attachment: scroll;
   }
   .section {
     padding: 3rem 0;

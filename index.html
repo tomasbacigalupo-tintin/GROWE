@@ -24,7 +24,7 @@
     <header class="header">
       <div class="container nav-container">
         <a href="#inicio" class="logo">Arkangel</a>
-        <nav class="nav">
+        <nav class="nav" aria-label="Navegación principal">
           <a href="#inicio">Inicio</a>
           <a href="#servicios">Servicios</a>
           <a href="#beneficios">Beneficios</a>
@@ -41,13 +41,15 @@
           <p class="fade-up" style="animation-delay: 0.1s">
             Tecnología de alto nivel con la fuerza de un guardián digital.
           </p>
-          <a
-            href="#"
+          <button
             id="open-modal"
             class="btn-primary fade-up"
             style="animation-delay: 0.2s"
-            >Solicitá tu diagnóstico gratuito</a
+            type="button"
+            aria-label="Solicitá tu diagnóstico gratuito"
           >
+            Solicitá tu diagnóstico gratuito
+          </button>
         </div>
       </section>
 
@@ -244,11 +246,12 @@
         <div class="container contacto">
           <h2 class="section-title">¿Listo para dar el siguiente paso?</h2>
           <form class="contact-form fade-up">
-            <input type="text" placeholder="Nombre" required />
-            <input type="email" placeholder="Email" required />
+            <input type="text" placeholder="Nombre" aria-label="Nombre" required />
+            <input type="email" placeholder="Email" aria-label="Email" required />
             <textarea
               rows="4"
               placeholder="¿Cómo podemos ayudarte?"
+              aria-label="¿Cómo podemos ayudarte?"
               required
             ></textarea>
             <button type="submit" class="btn-primary">
@@ -257,7 +260,7 @@
           </form>
           <p class="whatsapp fade-up" style="animation-delay: 0.1s">
             <a
-              href="https://wa.me/543513581965?text=Hola%20Arkangel,%20necesito%20proteger%20mi%20pyme."
+              href="https://wa.me/543513581965?text=Hola%20Arkangel%2C%20necesito%20proteger%20mi%20pyme."
               target="_blank"
               >O escribinos por WhatsApp</a
             >
@@ -269,11 +272,12 @@
         <div class="modal-content">
           <button class="modal-close" aria-label="Cerrar">&times;</button>
           <form id="modal-form" class="contact-form">
-            <input type="text" placeholder="Nombre" required />
-            <input type="email" placeholder="Email" required />
+            <input type="text" placeholder="Nombre" aria-label="Nombre" required />
+            <input type="email" placeholder="Email" aria-label="Email" required />
             <textarea
               rows="4"
               placeholder="¿Cómo podemos ayudarte?"
+              aria-label="¿Cómo podemos ayudarte?"
               required
             ></textarea>
             <button type="submit" class="btn-primary">Enviar</button>
@@ -289,7 +293,7 @@
     </footer>
 
     <a
-      href="https://wa.me/543513581965?text=Hola%20Arkangel,%20necesito%20proteger%20mi%20pyme."
+      href="https://wa.me/543513581965?text=Hola%20Arkangel%2C%20necesito%20proteger%20mi%20pyme."
       class="whatsapp-btn"
       target="_blank"
       aria-label="WhatsApp"
