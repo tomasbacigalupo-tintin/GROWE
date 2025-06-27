@@ -3,7 +3,7 @@
   --bg-alt: #131a24;
   --accent: #0f75bd; /* improved contrast */
   --accent-light: #21a0f6; /* softer highlight */
-  --bg-gradient: radial-gradient(circle at 20% 20%, #101521, var(--bg-main) 80%);
+  --bg-gradient: linear-gradient(135deg, #000000 0%, #06182c 50%, #0c3a60 100%);
   --gold: #f0c674;
   --text: #f5f5f5;
 }
@@ -120,7 +120,7 @@ body {
 
 .hero {
   background:
-    linear-gradient(rgba(10, 15, 26, 0.85), rgba(10, 15, 26, 0.85)),
+    linear-gradient(rgba(0, 0, 0, 0.85), rgba(10, 40, 80, 0.75)),
     url("https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=1350&q=80")
       center/cover no-repeat;
   padding: 6rem 0;
@@ -176,7 +176,7 @@ body {
 }
 
 .section-alt {
-  background: linear-gradient(180deg, var(--bg-alt) 0%, var(--bg-main) 100%);
+  background: linear-gradient(160deg, rgba(19, 26, 36, 0.95) 0%, rgba(10, 15, 26, 0.95) 100%);
 }
 
 .section-title {
@@ -228,6 +228,14 @@ body {
 .service-card:hover i {
   transform: scale(1.2);
   color: var(--accent-light);
+}
+
+.service-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 3px solid var(--accent);
+  border-radius: 10px;
 }
 
 .benefits-list {
