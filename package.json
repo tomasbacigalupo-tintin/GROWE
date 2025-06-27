@@ -1,5 +1,5 @@
 {
-  "name": "growe-site",
+  "name": "arkangel-site",
   "version": "1.0.0",
   "description": "Sitio estatico de Arkangel con backend simple de contacto",
   "main": "server.js",
