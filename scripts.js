@@ -88,5 +88,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
   handleSubmit(modalForm);
   if (mainForm) handleSubmit(mainForm);
+  const contactPageForm = document.getElementById("contact-form");
+  if (contactPageForm) handleSubmit(contactPageForm);
+
+  const readMoreLinks = document.querySelectorAll(".btn-outline-primary");
+  if (readMoreLinks.length) {
+    readMoreLinks.forEach((link) => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        const modal = document.createElement("div");
+        modal.className = "modal fade";
+        modal.tabIndex = -1;
+        modal.innerHTML = `
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Información del Artículo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Este artículo estará disponible pronto.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>`;
+        document.body.appendChild(modal);
+        const bootstrapModal = new bootstrap.Modal(modal);
+        bootstrapModal.show();
+      });
+    });
+  }
 });
 
