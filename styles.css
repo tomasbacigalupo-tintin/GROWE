@@ -250,6 +250,24 @@ body {
   box-shadow: 0 0 10px var(--accent-light);
 }
 
+.testimonials {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.testimonial {
+  background-color: #1b1b1b;
+  padding: 1.5rem;
+  border-left: 4px solid var(--accent);
+}
+
+.confidence-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
 .about p {
   max-width: 800px;
   margin: auto;

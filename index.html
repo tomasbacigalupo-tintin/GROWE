@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Arkangel protege negocios argentinos con soluciones de ciberseguridad modernas y un espíritu protector." />
+    <meta name="description" content="Arkangel brinda ciberseguridad de confianza para empresas latinoamericanas, combinando tecnología avanzada con un equipo experto disponible 24/7." />
     <title>Arkangel | Ciberseguridad para empresas</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -42,6 +42,33 @@
             aria-label="Solicitá tu diagnóstico gratuito">
             Solicitá tu diagnóstico gratuito
           </button>
+        </div>
+      </section>
+
+      <section id="testimonios" class="section">
+        <div class="container">
+          <h2 class="section-title">Testimonios</h2>
+          <div class="testimonials">
+            <blockquote class="testimonial fade-up">
+              <p>"Arkangel nos ayudó a cerrar vulnerabilidades críticas con rapidez y profesionalismo."</p>
+              <cite>Laura, CTO de TechSol</cite>
+            </blockquote>
+            <blockquote class="testimonial fade-up" style="animation-delay:0.1s">
+              <p>"Gracias a su acompañamiento logramos certificar normas internacionales de seguridad."</p>
+              <cite>Martín, CEO de FinCorp</cite>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section id="confianza" class="section section-alt">
+        <div class="container">
+          <h2 class="section-title">Nuestra Experiencia</h2>
+          <ul class="confidence-list">
+            <li class="fade-up">Más de 10 años protegiendo empresas en LATAM</li>
+            <li class="fade-up" style="animation-delay:0.1s">Partners certificados de AWS y Microsoft</li>
+            <li class="fade-up" style="animation-delay:0.2s">Cumplimiento de normas ISO 27001</li>
+          </ul>
         </div>
       </section>
 
@@ -99,10 +126,10 @@
       <section id="contacto" class="section section-alt">
         <div class="container contacto">
           <h2 class="section-title">¿Listo para proteger tu organización?</h2>
-          <form class="contact-form fade-up">
-            <input type="text" placeholder="Nombre" aria-label="Nombre" required />
-            <input type="email" placeholder="Email" aria-label="Email" required />
-            <textarea
+          <form id="main-contact-form" action="/api/contact" class="contact-form fade-up" method="post">
+            <input type="text" id="main-nombre" name="nombre" placeholder="Nombre" aria-label="Nombre" required />
+            <input type="email" id="main-email" name="email" placeholder="Email" aria-label="Email" required />
+            <textarea id="main-mensaje"
               rows="4"
               placeholder="¿Cómo podemos ayudarte?"
               aria-label="¿Cómo podemos ayudarte?"
@@ -121,10 +148,10 @@
       <div id="contact-modal" class="modal" aria-hidden="true">
         <div class="modal-content">
           <button class="modal-close" aria-label="Cerrar">&times;</button>
-          <form id="modal-form" class="contact-form">
-            <input type="text" placeholder="Nombre" aria-label="Nombre" required />
-            <input type="email" placeholder="Email" aria-label="Email" required />
-            <textarea
+          <form id="modal-form" action="/api/contact" method="post" class="contact-form">
+            <input type="text" id="modal-nombre" name="nombre" placeholder="Nombre" aria-label="Nombre" required />
+            <input type="email" id="modal-email" name="email" placeholder="Email" aria-label="Email" required />
+            <textarea id="modal-mensaje"
               rows="4"
               placeholder="¿Cómo podemos ayudarte?"
               aria-label="¿Cómo podemos ayudarte?"
@@ -138,7 +165,7 @@
 
     <footer class="footer">
       <div class="container">
-        <p>&copy; 2024 Arkangel. Todos los derechos reservados.</p>
+        <p>&copy; 2024 Arkangel. Todos los derechos reservados. <a href="privacidad.html">Política de Privacidad</a></p>
       </div>
     </footer>
 

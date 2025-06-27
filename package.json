@@ -1,0 +1,12 @@
+{
+  "name": "growe-site",
+  "version": "1.0.0",
+  "description": "Sitio estatico de Arkangel con backend simple de contacto",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.4"
+  }
+}

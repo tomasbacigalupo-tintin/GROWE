@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const openModalBtn = document.getElementById("open-modal");
   const closeModalBtn = document.querySelector(".modal-close");
   const modalForm = document.getElementById("modal-form");
+  const mainForm = document.getElementById("main-contact-form");
 
   const navToggle = document.querySelector(".nav-toggle");
   const nav = document.querySelector(".nav");
@@ -62,11 +63,30 @@ document.addEventListener("DOMContentLoaded", () => {
     modal.setAttribute("aria-hidden", "true");
   });
 
-  modalForm.addEventListener("submit", (e) => {
-    if (!modalForm.checkValidity()) {
+  function handleSubmit(form) {
+    form.addEventListener("submit", (e) => {
+      if (!form.checkValidity()) {
+        e.preventDefault();
+        form.reportValidity();
+        return;
+      }
       e.preventDefault();
-      modalForm.reportValidity();
-    }
-  });
+      fetch(form.action, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          nombre: form.querySelector("[name='nombre']").value,
+          email: form.querySelector("[name='email']").value,
+          mensaje: form.querySelector("[name='mensaje']")?.value || "",
+        }),
+      }).then(() => {
+        form.reset();
+        alert("Mensaje enviado con éxito");
+      }).catch(() => alert("Error al enviar el mensaje"));
+    });
+  }
+
+  handleSubmit(modalForm);
+  if (mainForm) handleSubmit(mainForm);
 });
 
