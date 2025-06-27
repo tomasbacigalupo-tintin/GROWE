@@ -30,6 +30,27 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeModalBtn = document.querySelector(".modal-close");
   const modalForm = document.getElementById("modal-form");
 
+  const navToggle = document.querySelector(".nav-toggle");
+  const nav = document.querySelector(".nav");
+  const navLinks = document.querySelectorAll(".nav a");
+
+  navToggle.addEventListener("click", () => {
+    const expanded = navToggle.getAttribute("aria-expanded") === "true";
+    navToggle.setAttribute("aria-expanded", String(!expanded));
+    navToggle.classList.toggle("active");
+    nav.classList.toggle("active");
+  });
+
+  navLinks.forEach((link) =>
+    link.addEventListener("click", () => {
+      if (window.innerWidth < 768) {
+        navToggle.classList.remove("active");
+        nav.classList.remove("active");
+        navToggle.setAttribute("aria-expanded", "false");
+      }
+    })
+  );
+
   openModalBtn.addEventListener("click", (e) => {
     e.preventDefault();
     modal.classList.add("show");
