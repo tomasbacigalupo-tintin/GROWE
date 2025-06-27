@@ -566,7 +566,6 @@ body {
 }
 
 /* Elimina cualquier cierre de llave sobrante y bloques duplicados/conflictivos */
-}
 .contact-form input:focus,
 .contact-form textarea:focus {
   border: 1.5px solid var(--accent-light);
@@ -824,25 +823,3 @@ body {
     padding: 1.2rem 0.8rem 1rem 0.8rem;
   }
 }
-  }
-  .confidence-card {
-    max-width: 100%;
-    min-width: 180px;
-    padding: 1.5rem 1rem 1rem 1rem;
-  }
-}
-
-@media (max-width: 700px) {
-  .confidence-cards {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 1rem;
-  }
-  .confidence-card {
-    margin-bottom: 0;
-    max-width: 100%;
-    min-width: 0;
-    padding: 1.2rem 0.8rem 1rem 0.8rem;
-  }
-}
-
