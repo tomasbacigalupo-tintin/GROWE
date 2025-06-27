@@ -52,23 +52,24 @@
                     </div>
                     <div class="col-md-6">
                         <h2 class="text-secondary mb-4">Formulario de Contacto</h2>
-                        <form id="contact-form" action="/api/contact" method="post" class="needs-validation" novalidate>
-                            <div class="mb-3">
-                                <label for="nombre" class="form-label">Nombre</label>
-                                <input type="text" id="nombre" name="nombre" class="form-control" required>
-                                <div class="invalid-feedback">Por favor ingrese su nombre.</div>
+                        <form id="contact-form" class="contact-form" action="/api/contact" method="post" autocomplete="off" novalidate>
+                            <div class="form-group">
+                                <label for="contact-nombre">Nombre</label>
+                                <input type="text" id="contact-nombre" name="nombre" placeholder="Tu nombre" aria-label="Nombre" required>
+                                <span class="form-error"></span>
                             </div>
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Correo Electrónico</label>
-                                <input type="email" id="email" name="email" class="form-control" required>
-                                <div class="invalid-feedback">Por favor ingrese un correo electrónico válido.</div>
+                            <div class="form-group">
+                                <label for="contact-email">Email</label>
+                                <input type="email" id="contact-email" name="email" placeholder="tu@email.com" aria-label="Email" required>
+                                <span class="form-error"></span>
                             </div>
-                            <div class="mb-3">
-                                <label for="mensaje" class="form-label">Mensaje</label>
-                                <textarea id="mensaje" name="mensaje" class="form-control" rows="5" required></textarea>
-                                <div class="invalid-feedback">Por favor ingrese su mensaje.</div>
+                            <div class="form-group">
+                                <label for="contact-mensaje">Mensaje</label>
+                                <textarea id="contact-mensaje" name="mensaje" rows="5" placeholder="¿Cómo podemos ayudarte?" aria-label="¿Cómo podemos ayudarte?" required></textarea>
+                                <span class="form-error"></span>
                             </div>
-                            <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                            <button type="submit" class="btn-primary">Solicitá tu diagnóstico gratuito</button>
+                            <span class="form-success" id="contact-success"></span>
                         </form>
                     </div>
                 </div>

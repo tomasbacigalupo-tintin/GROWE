@@ -100,8 +100,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  const mainForm = document.getElementById("main-contact-form");
-  if (mainForm) handleSubmit(mainForm);
+  const contactForms = document.querySelectorAll(".contact-form");
+  contactForms.forEach((form) => handleSubmit(form));
 
   const readMoreLinks = document.querySelectorAll(".btn-outline-primary");
   if (readMoreLinks.length) {
