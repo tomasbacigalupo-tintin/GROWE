@@ -300,6 +300,17 @@ body {
   gap: 0.5rem;
 }
 
+.confidence-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.confidence-list i {
+  color: var(--gold);
+  font-size: 1.2rem;
+}
+
 .about p {
   max-width: 800px;
   margin: auto;
