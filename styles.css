@@ -208,7 +208,7 @@ body {
   width: 100%;
   max-width: 700px;
   margin: 0 auto;
-  padding: 4rem 2rem;
+  padding: 6rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -252,6 +252,10 @@ body {
   letter-spacing: 0.01em;
   margin-top: 0.5rem;
   align-self: center;
+}
+
+.hero-content .btn-primary {
+  margin-top: 1rem;
 }
 
 .btn-primary:hover,
@@ -329,6 +333,7 @@ body {
   justify-items: center;
   align-items: stretch;
   margin-bottom: 0;
+  scroll-snap-type: y proximity;
 }
 .service-card {
   background: #181e2a;
@@ -345,6 +350,7 @@ body {
   text-align: center;
   padding: 2rem 1.5rem 1.5rem 1.5rem;
   margin-bottom: 0;
+  scroll-snap-align: start;
   transition: box-shadow 0.3s, transform 0.3s;
 }
 .info-card {
@@ -362,6 +368,7 @@ body {
   text-align: center;
   padding: 2rem 1.5rem 1.5rem 1.5rem;
   margin-bottom: 0;
+  scroll-snap-align: start;
   transition: box-shadow 0.3s, transform 0.3s;
 }
 .service-card i {
@@ -424,6 +431,7 @@ body {
   grid-template-columns: repeat(2, 1fr);
   gap: 2.2rem;
   margin-bottom: 2.5rem;
+  scroll-snap-type: y proximity;
 }
 .exp-card {
   background: #181e2a;
@@ -439,6 +447,7 @@ body {
   overflow: hidden;
   opacity: 0;
   transform: translateY(40px) scale(0.98);
+  scroll-snap-align: start;
 }
 .exp-card .exp-icon {
   flex-shrink: 0;
@@ -488,6 +497,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 2.2rem;
   margin-bottom: 2.5rem;
+  scroll-snap-type: y proximity;
 }
 .benefit-card {
   background: #181e2a;
@@ -503,6 +513,7 @@ body {
   overflow: hidden;
   opacity: 0;
   transform: scale(0.98) translateY(40px);
+  scroll-snap-align: start;
 }
 .benefit-icon {
   display: flex;
@@ -598,8 +609,16 @@ body {
   .confidence-card {
     padding: 1.2rem 0.8rem 1rem 0.8rem;
     min-width: 0;
-    max-width: 100%;
+    max-width: 90vw;
     min-height: 120px;
+    margin: 0 auto 1.2rem;
+  }
+  .hero-content {
+    padding: 7rem 1rem 5rem;
+  }
+  .hero-content h1 {
+    font-size: 2.3rem;
+    line-height: 1.2;
   }
   .exp-card .exp-icon,
   .benefit-icon,
@@ -622,9 +641,9 @@ body {
     padding: 1.2rem 0.8rem 1rem 0.8rem;
   }
   .whatsapp-btn {
-    bottom: 16px;
-    right: 16px;
-    font-size: 1.6rem;
+    bottom: 12px;
+    right: 12px;
+    font-size: 1.5rem;
     padding: 0.5em 0.6em;
   }
 }
@@ -648,7 +667,9 @@ body {
 
 .contact-form {
   max-width: 480px;
+  width: 100%;
   margin: 0 auto;
+  padding: 0 1rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -660,11 +681,12 @@ body {
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 0.75rem;
+  padding: 1rem;
   border: 1px solid #4a566e;
   border-radius: 4px;
   background: #232b3a;
   color: var(--text);
+  font-size: 1rem;
 }
 .contact-form textarea {
   resize: vertical;
@@ -699,8 +721,8 @@ body {
 
 @media (max-width: 700px) {
   .contact-form {
-    max-width: 98vw;
-    padding: 0 0.5rem;
+    max-width: 100%;
+    padding: 0 1rem;
   }
   .form-group label {
     font-size: 1em;
@@ -708,6 +730,10 @@ body {
   .btn-primary {
     font-size: 1.05rem;
     padding: 1rem 1.2rem;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1.05rem;
   }
 }
 
@@ -802,9 +828,9 @@ body {
     margin-top: 1.2rem;
   }
   .whatsapp-btn {
-    bottom: 16px;
-    right: 16px;
-    font-size: 1.6rem;
+    bottom: 12px;
+    right: 12px;
+    font-size: 1.5rem;
     padding: 0.5em 0.6em;
   }
 }
@@ -846,6 +872,7 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  scroll-snap-align: start;
   transition: box-shadow 0.3s, transform 0.3s;
   margin-bottom: 1rem;
 }
