@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
     elements.forEach(el => {
       const rect = el.getBoundingClientRect();
       if (rect.top < trigger) {
-        el.classList.add('visible');
+        el.classList.add('animated'); // Cambia 'visible' por 'animated'
       }
     });
   }

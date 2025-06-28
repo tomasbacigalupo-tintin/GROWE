@@ -560,23 +560,86 @@ body {
   z-index: 2;
 }
 
-/* ANIMACIONES GTA6-LIKE */
-.animate-on-scroll {
-  opacity: 0;
-  transform: translateY(40px) scale(0.98);
-  transition:
-    opacity 0.7s cubic-bezier(.4,0,.2,1),
-    transform 0.7s cubic-bezier(.4,0,.2,1);
+/* NUEVA SECCIÓN: Ciber Insurance para aseguradoras */
+.insurance-section {
+  background: var(--bg-main);
+  color: var(--text);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
-.animate-on-scroll.visible {
-  opacity: 1 !important;
-  transform: translateY(0) scale(1) !important;
+.insurance-hero {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.insurance-icon {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0f75bd 60%, #21a0f6 100%);
+}
+.insurance-icon svg {
+  width: 56px;
+  height: 56px;
+  display: block;
+}
+.insurance-section .section-title {
+  color: var(--accent);
+  font-size: 2.2rem;
+  letter-spacing: 0.01em;
+}
+.insurance-section .section-subtitle {
+  color: var(--accent-light);
+  font-size: 1.1rem;
+  margin-bottom: 2.2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.insurance-services {
+  margin-bottom: 2.5rem;
+}
+.insurance-services .info-card {
+  border: 1.5px solid var(--accent-light);
+  background: rgba(19,26,36,0.98);
+}
+.insurance-section .info-card i {
+  color: var(--gold);
+}
+.insurance-cta {
+  text-align: center;
+  margin-top: 2rem;
+}
+.insurance-cta .btn-cta {
+  margin-bottom: 1.5rem;
+  background: linear-gradient(90deg,#0f75bd 60%,#21a0f6 100%);
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 4px 24px rgba(33,160,246,0.13);
+  text-decoration: none !important; /* Quita subrayado */
+  border: none;
+  outline: none;
+  display: inline-block;
+}
+.insurance-cta .btn-cta:hover,
+.insurance-cta .btn-cta:focus {
+  background: linear-gradient(90deg, #21a0f6 0%, #0f75bd 100%);
+  color: #fff;
+  text-decoration: none !important;
 }
 
-/* Transiciones suaves entre secciones */
-.section,
-.section-alt {
-  transition: background 0.7s cubic-bezier(.4,0,.2,1);
+/* Mejora para la confianza en contacto */
+.contact-confidence {
+  text-align: center;
+  color: var(--accent-light);
+  font-size: 1.08rem;
+  margin-bottom: 1.2rem;
+  font-family: "Cinzel", serif;
+  font-weight: 500;
+  letter-spacing: 0.01em;
 }
 
 /* RESPONSIVE GRIDS */
@@ -597,6 +660,10 @@ body {
     grid-template-columns: 1fr;
     gap: 1.2rem;
   }
+  .insurance-services .info-card {
+    min-width: 0;
+    max-width: 100%;
+  }
   .confidence-cards {
     gap: 1rem;
   }
@@ -609,7 +676,8 @@ body {
 @media (max-width: 700px) {
   .card-grid,
   .experience-grid,
-  .benefits-grid {
+  .benefits-grid,
+  .insurance-services {
     grid-template-columns: 1fr;
     gap: 1.2rem;
   }
@@ -631,6 +699,14 @@ body {
     width: 44px;
     height: 44px;
     font-size: 1.5rem;
+  }
+  .insurance-icon {
+    width: 64px;
+    height: 64px;
+  }
+  .insurance-icon svg {
+    width: 40px;
+    height: 40px;
   }
   .confidence-cards {
     flex-direction: column;
@@ -658,6 +734,12 @@ body {
   .footer {
     font-size: 0.95rem;
     padding: 1.2rem 0;
+  }
+  .insurance-section .section-title {
+    font-size: 1.4rem;
+  }
+  .insurance-section .section-subtitle {
+    font-size: 1rem;
   }
 }
 
@@ -719,18 +801,65 @@ body {
   text-align: center;
 }
 
-@media (max-width: 700px) {
-  .contact-form {
-    max-width: 98vw;
-    padding: 0 0.5rem;
-  }
-  .form-group label {
-    font-size: 1em;
-  }
-  .btn-primary {
-    font-size: 1.05rem;
-    padding: 1rem 1.2rem;
-  }
+/* Animación de aparición */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s, transform 0.6s;
+}
+.animate-on-scroll.animated {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* Asegúrate que las cards tengan fondo y color de texto */
+.info-card,
+.service-card {
+  background: #181e2a;
+  color: #f5f5f5;
+}
+
+/* Errores de formulario */
+.field-error {
+  color: #e74c3c;
+  font-size: 0.9em;
+  margin-top: 4px;
+}
+.input-error {
+  border-color: #e74c3c;
+}
+
+/* Toast de éxito */
+.success-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 40px;
+  transform: translateX(-50%) scale(0.95);
+  background: #27ae60;
+  color: #fff;
+  padding: 1em 2em;
+  border-radius: 6px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 9999;
+}
+.success-toast.visible {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+  pointer-events: auto;
+}
+
+/* Menú móvil */
+.nav-menu {
+  display: none;
+  /* ...otros estilos... */
+}
+.nav-menu.menu-open {
+  display: block;
+}
+.nav-toggle.open {
+  /* Cambia el icono si lo deseas */
 }
 
 /* WhatsApp button */
