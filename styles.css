@@ -99,6 +99,7 @@ body {
   font-size: 1.5rem;
   font-weight: 700;
   text-decoration: none;
+  margin-right: auto;
 }
 
 .nav-toggle {
@@ -623,6 +624,8 @@ body {
   border: none;
   outline: none;
   display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .insurance-cta .btn-cta:hover,
 .insurance-cta .btn-cta:focus {
@@ -1087,6 +1090,8 @@ body {
 }
 .cyber-cta .btn-cta {
   margin-bottom: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 .cyber-cta {
   text-align: center;
